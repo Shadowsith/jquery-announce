@@ -1,4 +1,4 @@
-# jquery.announce.js - A micro-plugin for displaying unobtrusive announcements.
+# jQuery.announce - A micro-plugin for displaying unobtrusive announcements.
 
 Developed by Cory LaViska for A Beautiful Site, LLC
 
