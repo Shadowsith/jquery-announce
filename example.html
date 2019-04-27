@@ -80,11 +80,19 @@
     <button type="button" class="danger">Danger</button>
     <button type="button" class="warning">Warning</button>
     <button type="button" class="success">Success</button>
+    <button type="button" class="primary">Primary</button>
+    <button type="button" class="secondary">Secondary</button>
+    <button type="button" class="dark">Dark</button>
+    <button type="button" class="light">Light</button>
+    <button type="button" class="bottom">Bottom</button>
+    <button type="button" class="outline">Outline</button>
+    
     <button type="button" class="custom">Custom</button>
   </p>
 
-  <link rel="stylesheet" href="jquery.announce.css">
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <link rel="stylesheet" href="jquery.announce.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
   <script src="jquery.announce.min.js"></script>
   <script>
   $(function() {
@@ -100,12 +108,44 @@
 
     // Success
     $('.success').on('click', function() {
-      $.announce.info('We made it out!');
+      $.announce.success('We made it out!');
     });
 
     // Warning
     $('.warning').on('click', function() {
       $.announce.warning('Hey, be careful out there!');
+    });
+
+    // Primary
+    $('.primary').on('click', function() {
+      $.announce.primary('Primary notification!');
+    });
+
+    // Secondary
+    $('.secondary').on('click', function() {
+      $.announce.secondary('Secondary notification!');
+    });
+
+    // Dark
+    $('.dark').on('click', function() {
+      $.announce.dark('On light pages helpful!');
+    });
+
+    // Light
+    $('.light').on('click', function() {
+      $.announce.light('On dark themes helpful!');
+    });
+
+    // On page bottom
+    $('.bottom').on('click', function() {
+      $.announce.setPos('bottom');
+      $.announce.info('Can be on bottom too!');
+      $.announce.setPos('top');
+    });
+
+    // Outline style 
+    $('.outline').on('click', function() {
+      $.announce.info_outline('Notification could be outlined too!');
     });
 
     // Custom

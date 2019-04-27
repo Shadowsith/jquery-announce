@@ -1,17 +1,16 @@
-//
-// jQuery.announce - A micro-plugin for displaying unobtrusive announcements.
-//
-// Developed by Cory LaViska for A Beautiful Site, LLC
-//
-// Licensed under the MIT license: http://opensource.org/licenses/MIT
-//
+/* 
+ * jQuery.announce - A micro-plugin for displaying unobtrusive announcements.
+ * Developed by Cory LaViska for A Beautiful Site, LLC 
+ * Licensed under the MIT license: http://opensource.org/licenses/MIT 
+*/
+
 if(jQuery) (function($) {
   'use strict';
 
   function create(type, options) {
-    var defer = $.Deferred();
-    var announcement = $('<div>');
-    var timeout;
+    let defer = $.Deferred();
+    let announcement = $('<div>');
+    let timeout;
 
     if(typeof(options) === 'string') {
       options = { message: options };
@@ -19,15 +18,15 @@ if(jQuery) (function($) {
 
     options = $.extend({}, $.announce.defaults, options);
 
-    // Remove existing announcements
+    /* Remove existing announcements */
     $('.' + options.className).remove();
 
-    // Create the announcement
+    /* Create the announcement */
     $(announcement)
-      .addClass(options.className + ' ' + options.className + '-' + type)
+      .addClass(`${options.className}  ${options.className}-${type}`)
       .hide();
 
-    // Hide on click
+    /* Hide on click */
     if(options.hideOnClick) {
       $(announcement).on('click.announce', function() {
         clearTimeout(timeout);
@@ -35,20 +34,20 @@ if(jQuery) (function($) {
       });
     }
 
-    // Set the message
+    /* Set the message */
     if(options.html) {
       $(announcement).html(options.message);
     } else {
       $(announcement).text(options.message);
     }
 
-    // Add it to the DOM
+    /* Add it to the DOM */
     $('body').append(announcement);
 
-    // Show it
+    /* Show it */
     options.show.call(announcement);
 
-    // Hide after a moment
+    /* Hide after a moment */
     timeout = setTimeout(function() {
       options.hide.call(announcement).then(defer.resolve);
     }, options.duration);
@@ -57,52 +56,111 @@ if(jQuery) (function($) {
   }
 
   $.announce = {
-    // Default options
+    /* Default options */
     defaults: {
-      className: 'announce',
-      duration: 2000,
-      hideOnClick: true,
-      html: false,
-      show: function() {
-        var defer = $.Deferred();
-        $(this).fadeIn(250, function() {
-          defer.resolve();
-        });
-        return defer;
-      },
-      hide: function() {
-        var defer = $.Deferred();
-        $(this).fadeOut(250, function() {
-          $(this).remove();
-          defer.resolve();
-        });
-        return defer;
-      }
+       className: 'announce',
+        duration: 2000,
+        hideOnClick: true,
+        html: false,
+        show: function() {
+            let defer = $.Deferred();
+            $(this).fadeIn(250, function() {
+              defer.resolve();
+            });
+            return defer;
+        },
+        hide: function() {
+            let defer = $.Deferred();
+            $(this).fadeOut(250, function() {
+              $(this).remove();
+              defer.resolve();
+            });
+            return defer;
+        }
+    },
+    setPos: function(pos) {
+        if(pos === 'bottom') {
+            this.defaults.className = 'announce-bt';
+        } else {
+            this.defaults.className = 'announce';
+        }
+    },
+    setDuration: function(ms) {
+        this.defaults.duration = ms;
     },
 
-    // Info
+    /* Info */
     info: function(options) {
       return create('info', options);
     },
 
-    // Danger
+    info_outline: function(options) {
+      return create('info_outline', options);
+    },
+
+    /*Danger */
     danger: function(options) {
       return create('danger', options);
     },
 
-    // Success
+    danger_outline: function(options) {
+      return create('danger_outline', options);
+    },
+
+    /* Success */
     success: function(options) {
       return create('success', options);
     },
 
-    // Warning
+    success_outline: function(options) {
+      return create('success_outline', options);
+    },
+
+    /* Warning */
     warning: function(options) {
       return create('warning', options);
     },
 
-    // Custom announcement
+    warning_outline: function(options) {
+      return create('warning_outline', options);
+    },
+
+    /* Primary */
+    primary: function(options) {
+      return create('primary', options);
+    },
+
+    primary_outline: function(options) {
+      return create('primary_outline', options);
+    },
+
+    /* Secondary */
+    secondary: function(options) {
+      return create('secondary', options);
+    },
+
+    secondary_outline: function(options) {
+      return create('secondary_outline', options);
+    },
+
+    /* Dark */
+    dark: function(options) {
+      return create('dark', options);
+    },
+
+    dark_outline: function(options) {
+      return create('dark_outline', options);
+    },
+
+    /* Light */
+    light: function(options) {
+      return create('light', options);
+    },
+
+    /* Custom announcement */
     say: function(type, options) {
       return create(type, options);
     }
   };
+
 })(jQuery);
