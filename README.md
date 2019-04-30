@@ -45,6 +45,7 @@ $.announce.info('Hi there!');
 // Example with options
 $.announce.info({
   message: 'Well <em>hello</em> there!',
+  pos: 'bottom',
   duration: 2000,
   hideOnClick: true,
   html: true
@@ -87,7 +88,7 @@ If `options` is a string, it will be used as the message. If options is an objec
 Available options:
 
 - `className`: The class name to assign to the announcement.
-- 'pos': If set to 'bottom' the default announcements will be shown at the bottom of the page. Does not work on custom announcements yet!
+- `pos`: If set to 'bottom' the default announcements will be shown at the bottom of the page. Does not work on custom announcements yet!
 - `duration`: The length of time in milliseconds to show the announcement.
 - `hideOnClick`: If true, the announcement will be hidden when the user clicks on it.
 - `html`: If true, HTML will not be escaped when setting the message.
