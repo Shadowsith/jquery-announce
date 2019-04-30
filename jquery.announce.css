@@ -26,7 +26,6 @@
 
 .announce-danger_outline, .announce-bt-danger_outline {
   color: #dc3545;
-  background-color: white; 
   border: 1px solid transparent;
   border-color: #dc3545;
 }
@@ -38,7 +37,6 @@
 
 .announce-info_outline, .announce-bt-info_outline {
   color: #17a2b8;
-  background-color: white;
   border: 1px solid transparent;
   border-color: #17a2b8;
 }
@@ -51,7 +49,6 @@
 
 .announce-success_outline, .announce-bt-success_outline {
   color: #28a745;
-  background-color: white;
   border: 1px solid transparent;
   border-color: #28a745;
 }
@@ -63,7 +60,6 @@
 
 .announce-warning_outline, .announce-bt-warning_outline {
   color: #ffc107;
-  background-color: white;
   border: 1px solid transparent;
   border-color: #ffc107;
 }
@@ -76,7 +72,6 @@
 
 .announce-primary_outline, .announce-bt-primary_outline {
   color: #007bff;
-  background-color: white;
   border: 1px solid transparent;
   border-color: #007bff;
 }
@@ -88,7 +83,6 @@
 
 .announce-secondary_outline, .announce-bt-secondary_outline {
   color: #6c757d;
-  background-color: white;
   border: 1px solid transparent;
   border-color: #6c757d;
 }
@@ -100,7 +94,6 @@
 
 .announce-dark_outline, .announce-bt-dark_outline {
   color: #343a40;
-  background-color: white;
   border: 1px solid transparent;
   border-color: #343a40;
 }
