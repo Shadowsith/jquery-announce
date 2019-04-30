@@ -103,6 +103,12 @@
   background-color: #f8f9fa;
 }
 
+.announce-light_outline, .announce-bt-light_outline {
+  color: #f8f9fa;
+  border: 1px solid transparent;
+  border-color: #f8f9fa;
+}
+
 @media screen and(max-width: 500px) {
   .announce, .announce-bt {
     width: 100%;

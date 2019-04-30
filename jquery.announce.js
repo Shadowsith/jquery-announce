@@ -34,6 +34,15 @@ if(jQuery) (function($) {
       });
     }
 
+    /* Set to page bottom */
+    if(options.pos) {
+      if(options.pos == 'bottom') {
+        $(announcement)
+            .removeClass()
+            .addClass(`${options.className}-bt  ${options.className}-bt-${type}`)
+      }
+    }
+
     /* Set the message */
     if(options.html) {
       $(announcement).html(options.message);
@@ -78,17 +87,6 @@ if(jQuery) (function($) {
             return defer;
         }
     },
-    setPos: function(pos) {
-        if(pos === 'bottom') {
-            this.defaults.className = 'announce-bt';
-        } else {
-            this.defaults.className = 'announce';
-        }
-    },
-    setDuration: function(ms) {
-        this.defaults.duration = ms;
-    },
-
     /* Info */
     info: function(options) {
       return create('info', options);
@@ -155,6 +153,10 @@ if(jQuery) (function($) {
     /* Light */
     light: function(options) {
       return create('light', options);
+    },
+
+    light_outline: function(options) {
+      return create('light_outline', options);
     },
 
     /* Custom announcement */

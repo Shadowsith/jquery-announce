@@ -19,7 +19,8 @@ Features:
 - Show/hide hooks for adding custom animation (works well with Velocity.js).
 - Responsive
 - Works well with Bootstrap and other frameworks
-- Compact! (about 110 lines)
+- Same colorscheme as Bootstrap 4
+- Compact! (about 160 lines)
 
 ## Demo
 
@@ -54,10 +55,22 @@ $.announce.info({
 
 The following announcements are included by default:
 
-- `$.announce.info(options)`
-- `$.announce.danger(options)`
-- `$.announce.success(options)`
-- `$.announce.warning(options)`
+```javascript
+// Full colored announcements
+$.announce.info(options)
+$.announce.danger(options)
+$.announce.success(options)
+$.announce.warning(options)
+$.announce.primary(options)
+$.announce.secondary(options)
+$.announce.dark(options)
+$.announce.light(options)
+
+// Outline colored announcements 
+$.announce.info_outline(options)
+// ...
+
+```
 
 There is also a method to create custom announcements:
 
@@ -74,6 +87,7 @@ If `options` is a string, it will be used as the message. If options is an objec
 Available options:
 
 - `className`: The class name to assign to the announcement.
+- 'pos': If set to 'bottom' the default announcements will be shown at the bottom of the page. Does not work on custom announcements yet!
 - `duration`: The length of time in milliseconds to show the announcement.
 - `hideOnClick`: If true, the announcement will be hidden when the user clicks on it.
 - `html`: If true, HTML will not be escaped when setting the message.

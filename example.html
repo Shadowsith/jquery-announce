@@ -138,14 +138,15 @@
 
     // On page bottom
     $('.bottom').on('click', function() {
-      $.announce.setPos('bottom');
-      $.announce.info('Can be on bottom too!');
-      $.announce.setPos('top');
+      $.announce.info({
+        message: 'Hello at the bottom!',
+        pos: 'bottom'
+      });
     });
 
     // Outline style 
     $('.outline').on('click', function() {
-      $.announce.info_outline('Notification could be outlined too!');
+      $.announce.info_outline('Notification can be outlined too!');
     });
 
     // Custom
