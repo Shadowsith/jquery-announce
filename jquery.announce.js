@@ -36,7 +36,7 @@ if(jQuery) (function($) {
 
     /* Set to page bottom */
     if(options.pos) {
-      if(options.pos == 'bottom') {
+      if(options.pos === 'bottom') {
         $(announcement)
             .removeClass()
             .addClass(`${options.className}-bt  ${options.className}-bt-${type}`)
