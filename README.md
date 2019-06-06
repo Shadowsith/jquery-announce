@@ -24,7 +24,7 @@ Features:
 
 ## Demo
 
-A quick demo can be found on CodePen: http://codepen.io/claviska/pen/EZrrZz
+A quick demo can be found on CodePen: https://codepen.io/Shadowsith/pen/bJXqYQ
 
 A local demo can be found in `example.html`.
 
@@ -33,7 +33,7 @@ A local demo can be found in `example.html`.
 Include the minified version of this plugin in your project or install via NPM:
 
 ```
-npm install --save @claviska/jquery-announce
+npm install --save jquery-announce
 ```
 
 ## Using the plugin
