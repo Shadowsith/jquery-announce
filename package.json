@@ -3,7 +3,7 @@
   "description": "A micro-plugin for displaying unobtrusive announcements.",
   "version": "1.0.0",
   "author": "Cory LaViska",
-  "homepage": "https://github.com/claviska/jquery-alertable",
+  "homepage": "https://github.com/claviska/jquery-announce",
   "license": "MIT",
   "repository": {
     "type": "git",
