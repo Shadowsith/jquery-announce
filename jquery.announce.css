@@ -19,7 +19,7 @@
 
 .announce-danger {
   color: white;
-  background-color: #d9534f;
+  background-color: #dc3545;
 }
 
 .announce-info {
@@ -29,27 +29,32 @@
 
 .announce-success {
   color: white;
-  background-color: #5cb85c;
+  background-color: #28a745;
 }
 
 .announce-warning {
+  color: #343a40;
+  background-color: #ffc107;
+}
+
+.announce-primary {
   color: white;
-  background-color: #f0ad4e;
+  background-color: #007bff;
 }
 
 .announce-secondary {
   color: white;
-  background-color: #aaa;
+  background-color: #6c757d;
 }
 
 .announce-light {
   color: black;
-  background-color: #e6e6e6;
+  background-color: ##f8f9fa;
 }
 
 .announce-dark {
   color: white;
-  background-color: #292929;
+  background-color: #343a40;
 
 }
 

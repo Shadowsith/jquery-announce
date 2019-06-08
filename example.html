@@ -82,71 +82,54 @@
     <button type="button" class="success">Success</button>
     <button type="button" class="primary">Primary</button>
     <button type="button" class="secondary">Secondary</button>
-    <button type="button" class="dark">Dark</button>
     <button type="button" class="light">Light</button>
-    <button type="button" class="bottom">Bottom</button>
+    <button type="button" class="dark">Dark</button>
     <button type="button" class="outline">Outline</button>
-    
     <button type="button" class="custom">Custom</button>
   </p>
 
-
-  <link rel="stylesheet" href="jquery.announce.min.css">
-  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-  <script src="jquery.announce.min.js"></script>
+  <link rel="stylesheet" href="jquery.announce.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="jquery.announce.js"></script>
   <script>
   $(function() {
-    // Info
     $('.info').on('click', function() {
       $.announce.info('It’s dangerous to go alone! Take this.');
     });
 
-    // Danger
     $('.danger').on('click', function() {
       $.announce.danger('Dangerous roads are ahead!');
     });
 
-    // Success
     $('.success').on('click', function() {
-      $.announce.success('We made it out!');
+      $.announce.info('We made it out!');
     });
 
-    // Warning
     $('.warning').on('click', function() {
       $.announce.warning('Hey, be careful out there!');
     });
 
-    // Primary
     $('.primary').on('click', function() {
-      $.announce.primary('Primary notification!');
+      $.announce.primary('First!');
     });
 
-    // Secondary
     $('.secondary').on('click', function() {
-      $.announce.secondary('Secondary notification!');
+      $.announce.secondary('Hey, I am the second one');
     });
 
-    // Dark
-    $('.dark').on('click', function() {
-      $.announce.dark('On light pages helpful!');
-    });
-
-    // Light
     $('.light').on('click', function() {
-      $.announce.light('On dark themes helpful!');
+      $.announce.light('It’s very bright!');
     });
 
-    // On page bottom
-    $('.bottom').on('click', function() {
-      $.announce.info({
-        message: 'Hello at the bottom!',
-        pos: 'bottom'
-      });
+    $('.dark').on('click', function() {
+      $.announce.dark('Dark night is coming!');
     });
 
-    // Outline style 
     $('.outline').on('click', function() {
-      $.announce.info_outline('Notification can be outlined too!');
+      $.announce.info({
+        message: 'Outline notification',
+        outline: true
+      });
     });
 
     // Custom

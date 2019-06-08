@@ -9,9 +9,9 @@ if(jQuery) (function($) {
   'use strict';
 
   function create(type, options) {
-    var defer = $.Deferred();
-    var announcement = $('<div>');
-    var timeout;
+    let defer = $.Deferred();
+    let announcement = $('<div>');
+    let timeout;
 
     if(typeof(options) === 'string') {
       options = { message: options };
@@ -69,17 +69,18 @@ if(jQuery) (function($) {
       duration: 2000,
       hideOnClick: true,
       html: false,
+      bootstrap: false,
       outline: false,
       outlineColor: 'transparent',
       show: function() {
-        var defer = $.Deferred();
+        let defer = $.Deferred();
         $(this).fadeIn(250, function() {
           defer.resolve();
         });
         return defer;
       },
       hide: function() {
-        var defer = $.Deferred();
+        let defer = $.Deferred();
         $(this).fadeOut(250, function() {
           $(this).remove();
           defer.resolve();
@@ -106,6 +107,10 @@ if(jQuery) (function($) {
     // Warning
     warning: function(options) {
       return create('warning', options);
+    },
+
+    primary: function(options) {
+      return create('primary', options);
     },
 
     secondary: function(options) {
