@@ -45,6 +45,12 @@ if(jQuery) (function($) {
     // Add it to the DOM
     $('body').append(announcement);
 
+    if(options.outline) {
+      $(announcement).css('color', $(announcement).css('background-color'));
+      $(announcement).css('background-color', options.outlineColor);
+      $(announcement).addClass('announce-border');
+    }
+
     // Show it
     options.show.call(announcement);
 
@@ -63,6 +69,8 @@ if(jQuery) (function($) {
       duration: 2000,
       hideOnClick: true,
       html: false,
+      outline: false,
+      outlineColor: 'transparent',
       show: function() {
         var defer = $.Deferred();
         $(this).fadeIn(250, function() {
@@ -98,6 +106,18 @@ if(jQuery) (function($) {
     // Warning
     warning: function(options) {
       return create('warning', options);
+    },
+
+    secondary: function(options) {
+      return create('secondary', options);
+    },
+
+    light: function(options) {
+      return create('light', options);
+    },
+
+    dark: function(options) {
+      return create('dark', options);
     },
 
     // Custom announcement

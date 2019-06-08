@@ -58,6 +58,9 @@ The following announcements are included by default:
 - `$.announce.danger(options)`
 - `$.announce.success(options)`
 - `$.announce.warning(options)`
+- `$.announce.secondary(options)`
+- `$.announce.light(options)`
+- `$.announce.dark(options)`
 
 There is also a method to create custom announcements:
 
@@ -78,6 +81,8 @@ Available options:
 - `hideOnClick`: If true, the announcement will be hidden when the user clicks on it.
 - `html`: If true, HTML will not be escaped when setting the message.
 - `show`: Function for showing the announcement. Use `this` to reference the announcement element. Must return a promise-compatible object that resolves when the promise is completely visible. (This promise is currently not used, but is included for future enhancements.) Default value:
+- 'outline': If true, the announcement will be outlined
+- `outlineColor`: Color of announcement background-color. Default value: 'transparent'
   ```javascript
   function() {
     var defer = $.Deferred();

@@ -80,12 +80,16 @@
     <button type="button" class="danger">Danger</button>
     <button type="button" class="warning">Warning</button>
     <button type="button" class="success">Success</button>
+    <button type="button" class="secondary">Secondary</button>
+    <button type="button" class="light">Light</button>
+    <button type="button" class="dark">Dark</button>
+    <button type="button" class="outline">Outline</button>
     <button type="button" class="custom">Custom</button>
   </p>
 
   <link rel="stylesheet" href="jquery.announce.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="jquery.announce.min.js"></script>
+  <script src="jquery.announce.js"></script>
   <script>
   $(function() {
     // Info
@@ -106,6 +110,26 @@
     // Warning
     $('.warning').on('click', function() {
       $.announce.warning('Hey, be careful out there!');
+    });
+
+    $('.secondary').on('click', function() {
+      $.announce.secondary('Hey, I am the second one');
+    });
+
+    $('.light').on('click', function() {
+      $.announce.light('It’s very bright!');
+    });
+
+    $('.dark').on('click', function() {
+      $.announce.dark('Dark night is coming!');
+    });
+
+    $('.outline').on('click', function() {
+      $.announce.info({
+        message: 'Outline notification',
+        outline: true,
+        outlineColor: 'black'
+      });
     });
 
     // Custom

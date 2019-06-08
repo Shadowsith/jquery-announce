@@ -12,6 +12,11 @@
   user-select: none;
 }
 
+.announce-border {
+  border-style: solid;
+  border-width: 2px;
+}
+
 .announce-danger {
   color: white;
   background-color: #d9534f;
@@ -30,6 +35,22 @@
 .announce-warning {
   color: white;
   background-color: #f0ad4e;
+}
+
+.announce-secondary {
+  color: white;
+  background-color: #aaa;
+}
+
+.announce-light {
+  color: black;
+  background-color: #e6e6e6;
+}
+
+.announce-dark {
+  color: white;
+  background-color: #292929;
+
 }
 
 @media screen and(max-width: 500px) {
