@@ -45,7 +45,10 @@ $.announce.info('Hi there!');
 // Example with options
 $.announce.info({
   message: 'Well <em>hello</em> there!',
-  pos: 'bottom',
+  hPos: 'bottom',
+  vPos: `left`,
+  bootstrap: true,
+  outline: true
   duration: 2000,
   hideOnClick: true,
   html: true
