@@ -1,6 +1,7 @@
-.announce, .announce-bt {
+.announce {
   position: fixed;
   z-index: 9999;
+  top: 0;
   width: 500px;
   left: calc(50% - 250px);
   border-bottom-left-radius: 4px;
@@ -11,106 +12,49 @@
   user-select: none;
 }
 
-.announce {
-  top: 0;
+.announce-border {
+  border-style: solid;
+  border-width: 2px;
 }
 
-.announce-bt {
-  bottom: 0;
-}
-
-.announce-danger, .announce-bt-danger {
+.announce-danger {
   color: white;
-  background-color: #dc3545;
+  background-color: #d9534f;
 }
 
-.announce-danger_outline, .announce-bt-danger_outline {
-  color: #dc3545;
-  border: 1px solid transparent;
-  border-color: #dc3545;
-}
-
-.announce-info, .announce-bt-info {
+.announce-info {
   color: white;
-  background-color: #17a2b8;
+  background-color: #5bc0de;
 }
 
-.announce-info_outline, .announce-bt-info_outline {
-  color: #17a2b8;
-  border: 1px solid transparent;
-  border-color: #17a2b8;
-}
-
-
-.announce-success, .announce-bt-success {
+.announce-success {
   color: white;
-  background-color: #28a745;
+  background-color: #5cb85c;
 }
 
-.announce-success_outline, .announce-bt-success_outline {
-  color: #28a745;
-  border: 1px solid transparent;
-  border-color: #28a745;
-}
-
-.announce-warning, .announce-bt-warning {
-  color: #343a40;
-  background-color: #ffc107;
-}
-
-.announce-warning_outline, .announce-bt-warning_outline {
-  color: #ffc107;
-  border: 1px solid transparent;
-  border-color: #ffc107;
-}
-
-.announce-primary, .announce-bt-primary {
+.announce-warning {
   color: white;
-  background-color: #007bff;
-
+  background-color: #f0ad4e;
 }
 
-.announce-primary_outline, .announce-bt-primary_outline {
-  color: #007bff;
-  border: 1px solid transparent;
-  border-color: #007bff;
-}
-
-.announce-secondary, .announce-bt-secondary {
+.announce-secondary {
   color: white;
-  background-color: #6c757d;
+  background-color: #aaa;
 }
 
-.announce-secondary_outline, .announce-bt-secondary_outline {
-  color: #6c757d;
-  border: 1px solid transparent;
-  border-color: #6c757d;
+.announce-light {
+  color: black;
+  background-color: #e6e6e6;
 }
 
-.announce-dark, .announce-bt-dark {
+.announce-dark {
   color: white;
-  background-color: #343a40;
-}
+  background-color: #292929;
 
-.announce-dark_outline, .announce-bt-dark_outline {
-  color: #343a40;
-  border: 1px solid transparent;
-  border-color: #343a40;
-}
-
-.announce-light, .announce-bt-light {
-  color: #343a40;
-  background-color: #f8f9fa;
-}
-
-.announce-light_outline, .announce-bt-light_outline {
-  color: #f8f9fa;
-  border: 1px solid transparent;
-  border-color: #f8f9fa;
 }
 
 @media screen and(max-width: 500px) {
-  .announce, .announce-bt {
+  .announce {
     width: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
