@@ -1,13 +1,13 @@
 {
   "name": "jquery-announce",
   "description": "A micro-plugin for displaying unobtrusive announcements.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Cory LaViska, Philip Mayer",
   "homepage": "https://github.com/Shadowsith/jquery-announce",
   "license": "MIT",
   "repository": {
     "type": "git",
-"url": "git+https://github.com/Shadowsith/jquery-announce.git"
+    "url": "git+https://github.com/Shadowsith/jquery-announce.git"
   },
   "dependencies": {
     "jquery": ">= 1.8.x"
