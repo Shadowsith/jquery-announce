@@ -66,11 +66,6 @@ $.announce.primary(options)
 $.announce.secondary(options)
 $.announce.dark(options)
 $.announce.light(options)
-
-// Outline colored announcements 
-$.announce.info_outline(options)
-// ...
-
 ```
 
 There is also a method to create custom announcements:
@@ -88,11 +83,15 @@ If `options` is a string, it will be used as the message. If options is an objec
 Available options:
 
 - `className`: The class name to assign to the announcement.
-- `pos`: If set to 'bottom' the default announcements will be shown at the bottom of the page. Does not work on custom announcements yet!
 - `duration`: The length of time in milliseconds to show the announcement.
 - `hideOnClick`: If true, the announcement will be hidden when the user clicks on it.
 - `html`: If true, HTML will not be escaped when setting the message.
 - `show`: Function for showing the announcement. Use `this` to reference the announcement element. Must return a promise-compatible object that resolves when the promise is completely visible. (This promise is currently not used, but is included for future enhancements.) Default value:
+- `outline`: If true, the announcement will be outlined
+- `outlineColor`: Color of announcement background-color. Default value: `'transparent'`
+- `hPos`: Horizontal position, values `top|bottom|center`. Default value: `top`
+- `vPos`: Vertical position, values `left|right|center`. Default value: `center`
+- `bootstrap`: If true, bootstrap colorscheme for announcement is used
   ```javascript
   function() {
     var defer = $.Deferred();

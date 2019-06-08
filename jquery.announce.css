@@ -1,7 +1,6 @@
 .announce {
   position: fixed;
   z-index: 9999;
-  top: 0;
   width: 500px;
   left: calc(50% - 250px);
   border-bottom-left-radius: 4px;
@@ -12,6 +11,15 @@
   user-select: none;
 }
 
+.announce-bottom {
+  bottom: 0;
+}
+
+.announce-center {
+  top: calc(50% - 50px);  
+  left: calc(50% - 250px);
+}
+
 .announce-border {
   border-style: solid;
   border-width: 2px;
@@ -19,7 +27,7 @@
 
 .announce-danger {
   color: white;
-  background-color: #dc3545;
+  background-color: #d9534f;
 }
 
 .announce-info {
@@ -29,12 +37,12 @@
 
 .announce-success {
   color: white;
-  background-color: #28a745;
+  background-color: #5cb85c;
 }
 
 .announce-warning {
-  color: #343a40;
-  background-color: #ffc107;
+  color: white;
+  background-color: #f0ad4e;
 }
 
 .announce-primary {
@@ -44,18 +52,18 @@
 
 .announce-secondary {
   color: white;
-  background-color: #6c757d;
+  background-color: #aaa;
 }
 
 .announce-light {
   color: black;
-  background-color: ##f8f9fa;
+  background-color: #e6e6e6;
 }
 
 .announce-dark {
   color: white;
   background-color: #343a40;
-
+  background-color: #292929;
 }
 
 @media screen and(max-width: 500px) {

@@ -85,6 +85,10 @@
     <button type="button" class="light">Light</button>
     <button type="button" class="dark">Dark</button>
     <button type="button" class="outline">Outline</button>
+    <button type="button" class="bottom">Bottom</button>
+    <button type="button" class="left">Left</button>
+    <button type="button" class="right">Right</button>
+    <button type="button" class="center">Center</button>
     <button type="button" class="custom">Custom</button>
   </p>
 
@@ -93,6 +97,8 @@
   <script src="jquery.announce.js"></script>
   <script>
   $(function() {
+    $.announce.defaults.bootstrap = true;
+
     $('.info').on('click', function() {
       $.announce.info('It’s dangerous to go alone! Take this.');
     });
@@ -131,6 +137,35 @@
         outline: true
       });
     });
+
+    $('.bottom').on('click', function() {
+      $.announce.info({
+        message: 'Bottom notification',
+        vPos: 'bottom'
+      });
+    });
+
+    $('.left').on('click', function() {
+      $.announce.info({
+        message: 'Left notification',
+        hPos: 'left'
+      });
+    });
+
+    $('.right').on('click', function() {
+      $.announce.info({
+        message: 'Right notification',
+        hPos: 'right'
+      });
+    });
+
+    $('.center').on('click', function() {
+      $.announce.info({
+        message: 'Centered notification',
+        vPos: 'center'
+      });
+    });
+
 
     // Custom
     $('.custom').on('click', function() {
