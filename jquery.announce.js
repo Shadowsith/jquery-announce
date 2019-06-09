@@ -48,7 +48,7 @@ if(jQuery) (function($) {
     if(options.vPos != 'top') {
       switch(options.vPos) {
         case 'bottom':
-          $(announcement).css('bottom', 0);
+          $(announcement).addClass('announce-bottom');
           break;
         case 'center':
           $(announcement).addClass('announce-center');

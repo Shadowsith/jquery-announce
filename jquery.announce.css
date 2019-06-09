@@ -12,6 +12,7 @@
 }
 
 .announce-bottom {
+  top: calc(100% - 60px);
   bottom: 0;
 }
 

@@ -84,12 +84,16 @@
     <button type="button" class="secondary">Secondary</button>
     <button type="button" class="light">Light</button>
     <button type="button" class="dark">Dark</button>
+  </p>
+  <p>
     <button type="button" class="outline">Outline</button>
     <button type="button" class="bottom">Bottom</button>
     <button type="button" class="left">Left</button>
     <button type="button" class="right">Right</button>
     <button type="button" class="center">Center</button>
     <button type="button" class="custom">Custom</button>
+    <button type="button" class="bt_on">Bootstrap ON</button>
+    <button type="button" class="bt_off">Bootstrap OFF</button>
   </p>
 
   <link rel="stylesheet" href="jquery.announce.css">
@@ -97,7 +101,6 @@
   <script src="jquery.announce.js"></script>
   <script>
   $(function() {
-    $.announce.defaults.bootstrap = true;
 
     $('.info').on('click', function() {
       $.announce.info('It’s dangerous to go alone! Take this.');
@@ -108,7 +111,7 @@
     });
 
     $('.success').on('click', function() {
-      $.announce.info('We made it out!');
+      $.announce.success('We made it out!');
     });
 
     $('.warning').on('click', function() {
@@ -164,6 +167,15 @@
         message: 'Centered notification',
         vPos: 'center'
       });
+    });
+
+    $('.bt_on').on('click', function() {
+      $.announce.defaults.bootstrap = true;
+
+    });
+
+    $('.bt_off').on('click', function() {
+      $.announce.defaults.bootstrap = false;
     });
 
 
