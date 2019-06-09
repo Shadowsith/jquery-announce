@@ -1,10 +1,11 @@
-//
-// jQuery.announce - A micro-plugin for displaying unobtrusive announcements.
-//
-// Developed by Cory LaViska for A Beautiful Site, LLC
-//
-// Licensed under the MIT license: http://opensource.org/licenses/MIT
-//
+/*
+jQuery.announce - A micro-plugin for displaying unobtrusive announcements.
+
+ Developed by Cory LaViska for A Beautiful Site, LLC, 2017
+Extended by Philp Mayer <philip.mayer@shadowisth.de>, 2019
+
+Licensed under the MIT license: http://opensource.org/licenses/MIT
+*/
 if(jQuery) (function($) {
   'use strict';
 
