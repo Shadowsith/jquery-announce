@@ -71,12 +71,15 @@ if(jQuery) (function($) {
         }
     }
 
-    if(options.bootstrap) {
+    if(options.customColors) {
       let type = $(announcement).prop('class');
       type = type.split(' ')[1].split('-')[1];
-      $(announcement).css('background-color', options.btColors[type]);
-      if(type == 'light' || type == 'warning') {
-        $(announcement).css('color', options.btColors.light_fg);
+      $(announcement).css('background-color', options.colors[type]);
+      if(options.colors.text !== options.colors.dark && !options.outline) {
+        $(announcement).css('color', options.colors.text);
+      }
+      else if(type === 'light' || type === 'warning') {
+        $(announcement).css('color', options.colors.text);
       }
     }
 
@@ -104,7 +107,7 @@ if(jQuery) (function($) {
       duration: 2000,
       hideOnClick: true,
       html: false,
-      bootstrap: false,
+      customColors: false,
       outline: false,
       outlineColor: 'transparent',
       vPos: 'top',
@@ -124,7 +127,7 @@ if(jQuery) (function($) {
         });
         return defer;
       },
-      btColors: {
+      colors: {
           info: '#17a2b8',
           danger: '#dc3545',
           warning: '#ffc107',
@@ -132,7 +135,7 @@ if(jQuery) (function($) {
           primary: '#007bff',
           secondary: '#6c757d',
           light: '#f8f9fa',
-          light_fg: '#343a40',
+          text: '#343a40',
           dark: '#343a40'
       }
     },

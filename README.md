@@ -47,11 +47,19 @@ $.announce.info({
   message: 'Well <em>hello</em> there!',
   hPos: 'bottom',
   vPos: `left`,
-  bootstrap: true,
   outline: true
   duration: 2000,
   hideOnClick: true,
   html: true
+});
+
+// Use own colors
+$.announce.info({
+  message: 'Purple power!',
+  customColors: true,
+  // important: you need to set the same colors property as the announcement-type
+  // text is the color of the announcement text
+  colors: {info : 'purple', text: 'mistyrose'}
 });
 ```
 
@@ -94,7 +102,10 @@ Available options:
 - `outlineColor`: Color of announcement background-color. Default value: `'transparent'`
 - `hPos`: Horizontal position, values `top|bottom|center`. Default value: `top`
 - `vPos`: Vertical position, values `left|right|center`. Default value: `center`
-- `bootstrap`: If true, bootstrap colorscheme for announcement is used
+- `customColors`: If true, custom color/colorschemes for announcement can be used. By
+  default the custom color set are bootstrap 4 colors.
+- `colors`: Color set for custom colors. Usable options are: `info danger warning
+  success primary secondary light text dark`. `text` is for css color property.
   ```javascript
   function() {
     var defer = $.Deferred();
