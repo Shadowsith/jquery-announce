@@ -1,6 +1,7 @@
 # jQuery.announce - A micro-plugin for displaying unobtrusive announcements.
 
-Developed by Cory LaViska for A Beautiful Site, LLC
+Developed by Cory LaViska for A Beautiful Site, LLC, 2017<br>
+Extended by Philip Mayer 2019
 
 Licensed under the MIT license: http://opensource.org/licenses/MIT
 
@@ -36,6 +37,12 @@ Include the minified version of this plugin in your project or install via NPM:
 npm install --save jquery-announce
 ```
 
+For webpage usage you can also use the jsDelivr CDN:
+```html
+<!--Bind jquery here-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-announce@1.0.6/jquery.announce.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery-announce@1.0.6/jquery.announce.min.js"></script>
+```
 ## Using the plugin
 
 ```javascript

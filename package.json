@@ -1,7 +1,7 @@
 {
   "name": "jquery-announce",
   "description": "A micro-plugin for displaying unobtrusive announcements.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Cory LaViska, Philip Mayer",
   "homepage": "https://github.com/Shadowsith/jquery-announce",
   "license": "MIT",
@@ -28,7 +28,9 @@
   },
   "keywords": [
     "announcements",
+    "notifications",
     "jquery",
-    "bootstrap-colors"
+    "bootstrap",
+    "customizable"
   ]
 }
