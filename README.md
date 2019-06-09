@@ -68,7 +68,6 @@ $.announce.info({
 The following announcements are included by default:
 
 ```javascript
-// Full colored announcements
 $.announce.info(options)
 $.announce.danger(options)
 $.announce.success(options)
